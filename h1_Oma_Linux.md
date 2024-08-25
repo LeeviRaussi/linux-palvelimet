@@ -31,6 +31,7 @@ Vapaan ohjelmiston idea on siis siinä, että kuka tahansa voi käyttää ohjelm
 > - GPU: Radeon 780M Graphics (prosessoriin integroitu)
 > - RAM: 32 GB, 6400 MT/s
 > - OS: Windows 11 Home 23H2
+> - Näytön resoluutio: 2880x1800 (175% skaalaus)
 
 ### Tarvittavat tiedostot
 
@@ -58,7 +59,7 @@ Virtuaalikoneen luonnin jälkeen siirryin lisäämään asetuksista yllä ladatu
 
 ### Debian asennus
 
-Käynnistin seuraavaksi luomani virtuaalikoneen kaksoisklikkauksella. Mitättömän pienen kokoinen ikkuna ei kelvannut itselleni, joten muutin ylhäällä olevasta View-valikosta Scaled-tilan päälle, jolloin ikkunan koon muuttaminen muutti myös näkymän kokoa (kts. kuva alla). (Jälkihuomio: tämä näkymä vaihtoehto saattaa tulla ongelmalliseksi asennuksen myöhemmässä vaiheessa.)
+Käynnistin seuraavaksi luomani virtuaalikoneen kaksoisklikkauksella. Mitättömän pienen kokoinen ikkuna ei kelvannut itselleni, joten muutin ylhäällä olevasta View-valikosta Scaled-tilan päälle, jolloin ikkunan koon muuttaminen muutti myös näkymän kokoa (kts. kuva alla). (Jälkihuomio: tämä näkymä vaihtoehto saattaa tulla ongelmalliseksi asennuksen myöhemmässä vaiheessa. Palaaminen Windowed modeen oletus asetuksilla Oikea CTRL + C.)
 
 ![Live Debian](https://github.com/user-attachments/assets/c2cb33fb-8a5b-4e2f-9642-b6338985cd3f)
 
@@ -86,7 +87,73 @@ Sudo-käyttäjän tiedot löytyvät alla olevasta kuvasta.
 
 ![User](https://github.com/user-attachments/assets/c5a5b7cb-fa00-4810-a404-74fa60b1ab2d)
 
-Seuraavana olleena Summaryssä kaikki näytti olevan oikein, mutta "Install"-nappi näytti puuttuvan (kts. alla oleva kuva). Tarkemmalla tarkastelulla ruudun alalaidassa näyttäisi olevan kolme nappia lähes kokonaan piilossa. Tämä johtunee käyttämästäni View-asetuksesta, joka ei selvästikään vaikuta olleen paras ratkaisu. Edellisten vaiheiden perusteella veikkasin Install-napin olevan keskimmäinen, jota painoin toiveikkaana. Ilokseni asennusprosessi lähti käyntiin.
+Seuraavana olleena Summaryssä kaikki näytti olevan oikein, mutta "Install"-nappi näytti puuttuvan (kts. alla oleva kuva). Tarkemmalla tarkastelulla ruudun alalaidassa näyttäisi olevan kolme nappia lähes kokonaan piilossa. Tämä johtunee käyttämästäni View-asetuksesta, joka ei selvästikään vaikuta olleen paras ratkaisu. Edellisten vaiheiden perusteella veikkasin Install-napin olevan keskimmäinen, jota painoin toiveikkaana (kts. kuva alla). 
+
+![Piilossa](https://github.com/user-attachments/assets/d59887c2-ebaf-442f-91d6-e07cce92664a)
+
+Ilokseni asennusprosessi lähti käyntiin. Reilun viiden minuutin jälkeen asennus valmistui ja jouduin jälleen arpomaan alhaalla olevien näkymättömien nappien kanssa. Klikkasin oikealla olevaa, sillä keskellä ollut ei tuntunut reagoivan painalluksiini. Hetken odottelun jälkeen Login-ruutu avautui eteeni (kts. alla oleva kuva). Kirjautuminen edellä luomallani käyttäjällä onnistui nopeasti ja pääsin työpöytänäkymään.
+
+![login](https://github.com/user-attachments/assets/4ee2f2b2-77a7-4181-bc96-fd16f56b6ddc)
+
+### Näkymän muuttaminen
+
+Saatuani asennuksen onnistuneesti maaliin, päätin sulkea ja käynnistää uudelleen virtuaalikoneen, jotta saisin muokattua käyttämääni ruutunäkymää paremmaksi. Alla oleva kuva ilmoitti käynnistyksen yhteydessä siirtymisestä jälleen Scale modeen, mutta tällä kertaa ymmärsin katsoa komennon, jolla Windowed modeen palataan.
+
+![Scale mode](https://github.com/user-attachments/assets/62083311-f67a-4475-99a8-ee4fb92f15e4)
+
+Päästyäni takaisin tähän tilaan hetken kokeilun jälkeen päädyin valitsemaan Viewin Virtual Screen 1:stä 250 % skaalauksen, minkä lisäksi venytin virtuaalikoneen ruudun kokoa hieman, jotta näkymän ympärille syntyi ohut harmaa reuna (kts. kuva alla).
+
+![Virtual screen](https://github.com/user-attachments/assets/e9f59451-fe95-4cd6-bcc9-af5e1a0abb55)
+
+### Linuxin asetusten säätäminen
+
+Saatuani näkymän toimimaan tällä kertaa toivottavasti täysin oikein, palasin Karvisen (8.11.2023) ohjeisiin. Kirjautumisen jälkeen testasin verkon toimintaa selaimella, joka aukesi huomattavasti rivakammin kuin edellisellä kerralla. Avasin sitten Applications-valikosta Terminal Emulatorin ja lähdin päivittämään tietoja siitä, mitä koneella voisi päivittää käyttäen komentoa
+
+    sudo apt-get update
+
+minkä jälkeen annoin käyttäjäni salasanan. Perään päivitin kaiken päivitettävissä olevan komennolla
+
+    sudo apt-get -y dist-upgrade
+
+Kyseinen prosessi lähti käyntiin ilman salasanan syöttämistä (kts. alla kuva keskeneräisestä prosessista). Prosessi vei suhteellisen pitkään (arviolta päälle 10 minuuttia) ja Linux ilmeisesti meni välissä horrostilaan, minkä jälkeen jouduin kirjautumaan uudelleen sisälle. Päivitysprosessi jatkui kuitenkin suoraan kirjautumisen jälkeen ja valmistui noin minuuttia myöhemmin. Varmuuden vuoksi ajoin päivityskomennon uudelleen, mutta kaikki päivitettävissä olevat asiat oli tullut päivitettyä onnistuneesti jo ensimmäisellä kerralla huolimatta uloskirjautumisesta (kts. jälkimmäinen alla oleva kuva).
+
+![Paivitysprosessi](https://github.com/user-attachments/assets/d3c938cd-93de-46aa-a598-f3c4202128de)
+
+![dist-upgrade uudelleen](https://github.com/user-attachments/assets/de574cce-dfe7-445e-8942-d201595bfe70)
+
+Seuraavaksi asensin palomuurin komennolla
+
+    sudo apt-get -y install ufw
+
+ja otin palomuurin heti perään käyttöön komennolla (kts. kuva lopputuloksesta alla koodikomennon jälkeen)
+
+    sudo ufw enable
+
+![Palomuuri](https://github.com/user-attachments/assets/15923b87-f411-4bde-a9ff-93dfa069ae0e)
+
+Käynnistin tämän jälkeen virtuaalikoneen uudelleen vasemman ylälaidan Applications-valikon Log out:sta valitsemalla Restartin. Tässä kohtaa virtuaalikone vaihtoi jälleen käyttämänsä ikkunan resoluutiota (aiemmin automaattinen Resize 800x600, näkyvillä yllä olevassa Virtual Screen 1 kuvassa) automaattisesti muuttamattomaan "Resize 1280x800" kokoon, jonka päädyin tällä kertaa skaalaamaan 175 % kokoon.
+
+### VirtualBoxin Guest Additionsit
+
+Karvisen (8.11.2023) ohjeiden lopuksi on vapaaehtoisena toimena VirtualBoxin Guest Additions lisäosien asennus, jonka tein vielä, koska toivoin tätä kautta löytäväni ratkaisun resoluutio-ongelmiini (minkä lisäksi leikkaa-liimaa fyysisen ja virtuaalisen tietokoneiden välillä on myös hyödyllinen ominaisuus). Virtuaalikoneen ollessa päällä valitsin virtuaalikoneen ikkunan Devices välilehdestä "Insert Guest Additions CD Image..." (kts. kuva alla).
+
+![Devices](https://github.com/user-attachments/assets/a2a7d5ec-6bbe-4132-9af0-6bf9402abc7a)
+
+Tämä loi virtuaalikoneeseen CD-levyn, johon pääsin käsiksi Applicationsin File Managerin Devices välilehdeltä (kts. kuva alla).
+
+![File Manager](https://github.com/user-attachments/assets/8d8d8ad7-3f25-4f63-b1e3-cdad4cd96a8f)
+
+Avasin sitten Applicationsista Terminal Emulatorin ja ajoin kolme koodia alla olevan kuvan mukaisesti. Ensimmäisenä oleva cd-komento siirtää tarkasteltavan sijainnin CD-levylle. Toisena oleva ls-komento näyttää levyn sisällön. Viimeisenä oleva sudo-komento suorittaa perässä olevan skriptin, joka tässä tapauksessa suorittaa asennuksen.
+
+![Guest-asennus](https://github.com/user-attachments/assets/af359360-ed0d-4f46-8ad3-54e42d93e146)
+
+Tämän jälkeen valitsin Applicationsin kautta Log out ja Restart virtuaalikoneen käynnistämiseksi uudelleen, jotta äsken tehty asennus tulisi päätökseen. Huomasinkin heti, että nyt muuttaessani VirtualBoxin ikkunan kokoa myös näkymä skaalautui ikkunan koon mukaisesti oikein (hieman nykien), eli pääsin haluamaani lopputulokseen. Myös fyysisen ja virtuaalisen koneiden välinen leikkaa-liimaa toimii nyt, kun VirtualBoxin ikkunan Devices-välilehden Shared Clipboard kohdasta valitaan Bidirectional (kts. kuva alla).
+
+![Jaettu copypaste](https://github.com/user-attachments/assets/83162f4b-de47-486c-9b91-bd34b807e1df)
+
+## k) Linuxin suosikkiohjelma?
+
+En ole käyttänyt liiemmin Linuxia aiemmin, mutta asia, josta pidän, on komentorivin käyttäminen. Erityisesti Linuxin asentamisessakin esiintullut useamman asian asentaminen ja päivittäminen yhdellä komennolla on mielestäni erinomainen ominaisuus tehokäyttäjälle. Normaalissa arkikäytössä komentoriviä ei välttämättä halua käyttää graafisen käyttöliittymän sijasta, mutta erityisesti useampaa laitetta hallinnoidessa ymmärrän hyvin, minkä takia komentorivin käyttäminen on mielekkäämpää kuin graafisen käyttöliittymän käyttö.
 
 ## Lähdeluettelo
 
