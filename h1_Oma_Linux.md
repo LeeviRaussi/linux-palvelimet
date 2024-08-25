@@ -2,7 +2,9 @@
 
 > ## Tiivistelmä
 >
-> Raportissa tiivistetään ensin Karvisen (4.6.2006) artikkeli raportin kirjoittamisesta sekä Free Software Foundationin määritelmä vapaasta ohjelmistosta (free software)
+> Raportissa tiivistetään ensin Karvisen (4.6.2006) artikkeli raportin kirjoittamisesta sekä Free Software Foundationin määritelmä vapaasta ohjelmistosta (free software). Tämän jälkeen asennetaan käytetylle tietokoneelle VirtualBox ja luodaan kyseiseen ohjelmaan Debian pohjainen Linux-virtuaalikone.
+>
+> Käytetty aika: noin 3 tuntia leppoisalla työtahdilla
 
 ## x) Artikkelitiivistelmät
 
