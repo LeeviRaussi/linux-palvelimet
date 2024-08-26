@@ -23,7 +23,7 @@ Free Software Foundation (FSF) määrittelee vapaaksi ohjelmistoksi (free softwa
 > 
 > (FSF 1.1.2024)
 
-Vapaan ohjelmiston idea on siis siinä, että kuka tahansa voi käyttää ohjelmistoa oman mielensä mukaisesti ja tarvittaessa muokata sitä sopimaan omiin tarpeisiinsa. FSF (1.1.2024) myös huomauttaa, että vapaa ohjelmisto ei tarkoita sitä, etteikö ohjelmistoa voisi käyttää kaupallisesti tai myydä eteenpäin, joskin ohjelmiston tulisi edelleen noudattaa neljää vapautta, jotta se pysyisi vapaana ohjelmistona. Mikäli ohjelmisto ei nooudata jotain neljästä vapaudesta, sitä pidetään ei-vapaana riippumatta missä määrin tai muodossa vapauksien rikkominen tapahtuu (FSF 1.1.2024).
+Vapaan ohjelmiston idea on siis siinä, että kuka tahansa voi käyttää ohjelmistoa oman mielensä mukaisesti ja tarvittaessa muokata sitä sopimaan omiin tarpeisiinsa. FSF (1.1.2024) myös huomauttaa, että vapaa ohjelmisto ei tarkoita sitä, etteikö ohjelmistoa voisi käyttää kaupallisesti tai myydä eteenpäin, joskin ohjelmiston tulisi edelleen noudattaa neljää vapautta, jotta se pysyisi vapaana ohjelmistona. Mikäli ohjelmisto ei noudata jotain neljästä vapaudesta, sitä pidetään ei-vapaana riippumatta missä määrin tai muodossa vapauksien rikkominen tapahtuu (FSF 1.1.2024).
 
 ## Linuxin asentaminen virtuaalikoneeseen
 
