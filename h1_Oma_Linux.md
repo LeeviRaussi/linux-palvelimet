@@ -145,7 +145,7 @@ Tämä loi virtuaalikoneeseen CD-levyn, johon pääsin käsiksi Applicationsin F
 
 ![File Manager](https://github.com/user-attachments/assets/8d8d8ad7-3f25-4f63-b1e3-cdad4cd96a8f)
 
-Avasin sitten Applicationsista Terminal Emulatorin ja ajoin kolme koodia alla olevan kuvan mukaisesti. Ensimmäisenä oleva cd-komento siirtää tarkasteltavan sijainnin CD-levylle. Toisena oleva ls-komento näyttää levyn sisällön. Viimeisenä oleva sudo-komento suorittaa perässä olevan skriptin, joka tässä tapauksessa suorittaa asennuksen.
+Avasin sitten Applicationsista Terminal Emulatorin ja ajoin kolme koodia alla olevan kuvan mukaisesti. Ensimmäisenä oleva cd-komento siirtää tarkasteltavan sijainnin CD-levylle. Toisena oleva ls-komento näyttää levyn sisällön. Viimeisenä oleva sudo-komento suorittaa perässä olevan skriptin, joka tässä tapauksessa suorittaa asennuksen. Annoin myös pääkäyttäjän salasanan, jotta asennus voitiin suorittaa.
 
 ![Guest-asennus](https://github.com/user-attachments/assets/af359360-ed0d-4f46-8ad3-54e42d93e146)
 
@@ -155,7 +155,7 @@ Tämän jälkeen valitsin Applicationsin kautta Log out ja Restart virtuaalikone
 
 ## k) Linuxin suosikkiohjelma?
 
-En ole käyttänyt liiemmin Linuxia aiemmin, mutta asia, josta pidän, on komentorivin käyttäminen. Erityisesti Linuxin asentamisessakin esiintullut useamman asian asentaminen ja päivittäminen yhdellä komennolla on mielestäni erinomainen ominaisuus tehokäyttäjälle. Normaalissa arkikäytössä komentoriviä ei välttämättä halua käyttää graafisen käyttöliittymän sijasta, mutta erityisesti useampaa laitetta hallinnoidessa ymmärrän hyvin, minkä takia komentorivin käyttäminen on mielekkäämpää kuin graafisen käyttöliittymän käyttö.
+En ole käyttänyt liiemmin Linuxia aiemmin, mutta asia, josta pidän, on komentorivin käyttäminen. Erityisesti Linuxin asentamisessakin esiintullut useamman asian asentaminen ja päivittäminen yhdellä komennolla on mielestäni erinomainen ominaisuus tehokäyttäjälle. Normaalissa arkikäytössä komentoriviä ei välttämättä halua käyttää graafisen käyttöliittymän sijasta, mutta erityisesti useampaa laitetta hallinnoidessa ymmärrän hyvin, minkä takia komentorivin käyttäminen on mielekkäämpää kuin graafisen käyttöliittymän käyttö. Tältä kannalta suosikkiohjelmani saattaisi olla Terminal Emulator.
 
 ## Lähdeluettelo
 
