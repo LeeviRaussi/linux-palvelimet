@@ -34,6 +34,7 @@ Vapaan ohjelmiston idea on siis siinä, että kuka tahansa voi käyttää ohjelm
 > - RAM: 32 GB, 6400 MT/s
 > - OS: Windows 11 Home 23H2
 > - Näytön resoluutio: 2880x1800 (175% skaalaus)
+> - SSD: 795 GB vapaana asennuksen jälkeen (951 GB maksimi)
 
 ### Tarvittavat tiedostot
 
