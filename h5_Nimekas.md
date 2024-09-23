@@ -36,7 +36,7 @@ Kun nyt tiesin kahden toisen sivun osoitteet, niin lähdin muokkaamaan etusivun 
 
 ![Buginen href](https://github.com/user-attachments/assets/7efc4fc3-a9c5-4494-9b5f-36f1e230131b)
 
-Osoitekentän perusteella muokka `href`-koodia (ks. ensimmäinen alla oleva kuva), minkä myötä hyperlinkit alkoivat toimia kunhan käynnistin Apachen aina uudelleen (ks. jälkimmäinen kuva alla kaikista komennoista tässä vaiheessa).
+Osoitekentän perusteella muokkasin `href`-koodia (ks. ensimmäinen alla oleva kuva), minkä myötä hyperlinkit alkoivat toimia kunhan käynnistin Apachen aina uudelleen (ks. jälkimmäinen kuva alla kaikista komennoista tässä vaiheessa).
 
 ![Korjattu href](https://github.com/user-attachments/assets/3f75a30b-ba6d-4973-a846-7acdb94b8e5e)
 
@@ -78,7 +78,7 @@ Komento `man host` kertoi, että komentoa `host` käytetään selvittämään ti
 
 ![host raussi me](https://github.com/user-attachments/assets/84d65b0c-582e-4b9b-8db7-207e60d1bd94)
 
-Mikäli `host`-komentoa ei lähdetä tarkemmin määrittelemään erinäisiä argumentteja, saadut tulokset eivät poikkea kovinkaan paljoa vaikka siirryttäisiin isommillekin verkkosivuille. Tästä esimerkkinä toimivat hyvin kruunuradio.fi, hifi-laitteisiin erikoistunut myymälä, sekä maailman suurin hakukone Google. Kun molempia sivuja tarkasteltiin komennolla, eivät saadut tulokset sinällään poikenneet raussi.me-tuloksista, vaan näillekin annettiin kuuliaisesti Ipv4-osoite (ja Googlen tapauksessa myös IPv6-osoite) sekä yksittäinen sähköpostipalvelin. Näiden sivujen kohdalla tosin käänteinen haku IP-osoitteella tuotti myös tuloksen, Googlen kohdalla jopa neljä eri PTR-tietuetta osoittaa sivustoon (ks. kuva alla). Tämä nostaa myös esiin mahdollisuuden, että oman sivuni PTR-tietueessa saattaisi olla ongelma.
+Mikäli `host`-komentoon ei lähdetä tarkemmin määrittelemään erinäisiä argumentteja, saadut tulokset eivät poikkea kovinkaan paljoa vaikka siirryttäisiin isommillekin verkkosivuille. Tästä esimerkkinä toimivat hyvin kruunuradio.fi, hifi-laitteisiin erikoistunut myymälä, sekä maailman suurin hakukone Google. Kun molempia sivuja tarkasteltiin komennolla, eivät saadut tulokset sinällään poikenneet raussi.me-tuloksista, vaan näillekin annettiin kuuliaisesti Ipv4-osoite (ja Googlen tapauksessa myös IPv6-osoite) sekä yksittäinen sähköpostipalvelin. Näiden sivujen kohdalla tosin käänteinen haku IP-osoitteella tuotti myös tuloksen, Googlen kohdalla jopa neljä eri PTR-tietuetta osoittaa sivustoon (ks. kuva alla). Tämä nostaa myös esiin mahdollisuuden, että oman sivuni PTR-tietueessa saattaisi olla ongelma.
 
 ![host muut](https://github.com/user-attachments/assets/6adceb7c-ba98-4b2e-a2c3-d3da8fff7c75)
 
