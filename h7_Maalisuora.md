@@ -140,7 +140,7 @@ Tässä kohtaa minulta kuitenkin loppui aika. Aivan maaliin saakka en siis pää
 
 ## d) Uusi virtuaalikone labraa varten
 
-Uusi virtuaalikone arvioitavaa laboratorioharjoitusta varten on asennettu.
+Uusi virtuaalikone arvioitavaa laboratorioharjoitusta varten on asennettu, valmiina olleet ohjelmat päivitetty, tulimuuri asennettu ja VirtualBox lisäosa resoluution parantamiseksi otettu käyttöön.
 
 ## Lähdeluettelo
 
