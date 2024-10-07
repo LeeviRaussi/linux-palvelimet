@@ -14,7 +14,7 @@
 > - Näytön resoluutio: 2880x1800 (175% skaalaus)
 > - SSD: 777/951 GB vapaana
 
-## "Hei maailma" eri kielillä
+## a) "Hei maailma" eri kielillä
 
 Tehtävässä oli tarkoituksena kirjoittaa "Hei maailma"-koodi kolmella eri kielellä ja suorittaa jokainen koodi komentorivillä. Käytin koodien kirjoittamisessa apuna Karvisen (27.9.2018) artikkelia, josta valitsin käytettäviksi kieliksi Pythonin, Bashin ja C:n.
 
@@ -137,6 +137,10 @@ Tehtävät a)-h1) tehty ja osoitettu toimivaksi. Tehtävä h2) jäänyt vajaaksi
 ![h) localhost django](https://github.com/user-attachments/assets/5ec94783-cc4e-4cf3-bfe7-08f4cf57fc02)
 
 Tässä kohtaa minulta kuitenkin loppui aika. Aivan maaliin saakka en siis päässyt (DEBUG-tilan poisto ja CSS-tyylien muokkaus jäivät uupumaan), mutta joitain huomionarvoisia nostoja sain kuitenkin näistä viimeisistä virheistäni tehtyä. Tärkeimpänä näistä minun ei olisi kannattanut muuttaa tekemääni aikakone.conf-tiedostoa static-hakemistoon sopivaksi, vaan tämän kopioiminen olisi ollut järkevämpi vaihtoehto. Tällöin olisin todennäköisesti saanut ainakin ensiksi localhostissa näkymään alkuperäisen sivun ja localhost/static/index.html-osoitteessa "staattisen"-sivun. Tämän jälkeen mikäli Django ei pelaisi yhteen alkuperäisen aikakoneen index.html kanssa, voi sen sulkea pois käytöstä.
+
+## d) Uusi virtuaalikone labraa varten
+
+Uusi virtuaalikone arvioitavaa laboratorioharjoitusta varten on asennettu.
 
 ## Lähdeluettelo
 
